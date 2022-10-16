@@ -42,7 +42,6 @@ public class Cinema {
             }
             System.out.println();
         }
-
         System.out.println();
     }
 
@@ -83,7 +82,6 @@ public class Cinema {
         }
 
         System.out.println("Ticket price: $"+ticketPrice);
-
         return ticketPrice;
     }
 
@@ -130,8 +128,6 @@ public class Cinema {
         System.out.println("Percentage: "+df.format(numberOfPurchased)+"%");
         System.out.println("Current income: $"+currentIncome);
         System.out.println("Total income: $"+totalTicketPrice);
-
-
     }
 
     public static int roomAction(){
@@ -143,8 +139,6 @@ public class Cinema {
         return scanner.nextInt();
     }
 
-
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number of rows:");
@@ -153,14 +147,6 @@ public class Cinema {
         int numberOfSeatsInRow = scanner.nextInt();
         char[][] room = new char[numberOfRows][numberOfSeatsInRow];
         boolean exit = true;
-        // Write your code here
-        /*
-        System.out.println("Cinema:");
-        System.out.println("   1 2 3 4 5 6 7 8");
-        int rows = 7;
-        int seatInRow = 8;
-        */
-
 
         createRoomSeats(room, numberOfRows, numberOfSeatsInRow);
 
@@ -178,32 +164,5 @@ public class Cinema {
             }
         }
 
-        /*
-        printSeats(room, numberOfRows,numberOfSeatsInRow);
-        buyTicket(room, numberOfRows,numberOfSeatsInRow);
-        printSeats(room, numberOfRows,numberOfSeatsInRow);
-        */
-
-
-
-        /*
-        System.out.println("Enter the number of rows:");
-        int numberOfRows = scanner.nextInt();
-        System.out.println("Enter the number of seats in each row:");
-        int numberOfSeatsInRow = scanner.nextInt();
-        if(numberOfRows * numberOfSeatsInRow <= 60) {
-            System.out.println("Total income:");
-            System.out.println("$"+numberOfRows * numberOfSeatsInRow*10);
-        }
-        if(numberOfRows * numberOfSeatsInRow >60) {
-            int firstHalfOfRows = numberOfRows/2;
-            System.out.println(firstHalfOfRows);
-            int secondHalfOfRows = numberOfRows-firstHalfOfRows;
-            System.out.println(secondHalfOfRows);
-            System.out.println("Total income:");
-            System.out.println("$"+ (firstHalfOfRows*numberOfSeatsInRow*10 + secondHalfOfRows*numberOfSeatsInRow*8));
-        }
-
-         */
     }
 }
